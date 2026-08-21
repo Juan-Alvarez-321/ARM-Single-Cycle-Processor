@@ -1,3 +1,51 @@
-# Ignore Windows Alternate Data Streams (Zone.Identifier)
-*:Zone.Identifier
+#--- Windows / WSL ---
 *Zone.Identifier
+Thumbs.db
+desktop.ini
+
+#--- Vivado project output ---
+.Xil/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.srcs/sources_1/ip/*/
+*.str
+*.jou
+*.log
+vivado*.backup.jou
+vivado*.backup.log
+vivado_pid*.str
+*.pb
+hs_err_pid*.log
+
+#--- Simulation ---
+*.vcd
+*.fst
+*.ghw
+*.wdb
+*.wlf
+*.vvp
+a.out
+xsim.dir/
+webtalk*.jou
+webtalk*.log
+
+#--- Build ---
+*.o
+*.d
+build/
+obj/
+
+#--- Editor ---
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# Do not ignore these
+!*.xdc
+!*.tcl
+!*.wcfg
