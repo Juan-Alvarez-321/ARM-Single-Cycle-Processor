@@ -42,8 +42,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0000;
-            SignOp = 2'bxx;
+            alu_op = 4'b0000;
+            sign_op = 2'bxx;
 
         end
 
@@ -56,8 +56,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0001;
-            SignOp = 2'bxx;
+            alu_op = 4'b0001;
+            sign_op = 2'bxx;
         end
 
         `OPCODE_ADDREG: begin
@@ -69,8 +69,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0010;
-            SignOp = 2'bxx;
+            alu_op = 4'b0010;
+            sign_op = 2'bxx;
         end
 
         `OPCODE_SUBREG: begin
@@ -82,8 +82,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0110;
-            SignOp = 2'bxx;
+            alu_op = 4'b0110;
+            sign_op = 2'bxx;
         end
 
         `OPCODE_ADDIMM: begin
@@ -95,8 +95,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0010;
-            SignOp = 2'b00;
+            alu_op = 4'b0010;
+            sign_op = 2'b00;
         end
 
         `OPCODE_SUBIMM: begin
@@ -108,8 +108,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0110;
-            SignOp = 2'b00;
+            alu_op = 4'b0110;
+            sign_op = 2'b00;
         end
 
         `OPCODE_B: begin
@@ -121,8 +121,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b1;
-            ALUOp = 4'bxxxx;
-            SignOp = 2'b11;
+            alu_op = 4'bxxxx;
+            sign_op = 2'b11;
         end
 
         `OPCODE_CBZ: begin
@@ -134,8 +134,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b1;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0111;
-            SignOp = 2'b10;
+            alu_op = 4'b0111;
+            sign_op = 2'b10;
 
         end
 
@@ -148,8 +148,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0010;
-            SignOp = 2'b01;
+            alu_op = 4'b0010;
+            sign_op = 2'b01;
         end
 
         `OPCODE_STUR: begin
@@ -161,8 +161,8 @@ always @(*) begin
             mem_write = 1'b1;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0010;
-            SignOp = 2'b01;
+            alu_op = 4'b0010;
+            sign_op = 2'b01;
         end
 
         default: begin
@@ -174,8 +174,8 @@ always @(*) begin
             mem_write = 1'b0;
             branch = 1'b0;
             uncondbranch = 1'b0;
-            ALUOp = 4'b0000;
-            SignOp = 2'b00;
+            alu_op = 4'b0000;
+            sign_op = 2'b00;
         end
     endcase
     
