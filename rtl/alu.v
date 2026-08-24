@@ -20,9 +20,10 @@
 
 module ALU(
 
+    input      [3:0]  alu_ctrl,
     input      [63:0] bus_a,
     input      [63:0] bus_b,
-    input      [3:0]  alu_ctrl,
+    
 
     output reg [63:0] bus_w,
     output reg        zero
